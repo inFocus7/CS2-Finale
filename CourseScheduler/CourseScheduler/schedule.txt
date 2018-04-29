@@ -1,0 +1,16 @@
+2380 1370 calc1
+1370 1101
+3333 3310 2380
+seniorproject softwareeng 3333
+molecularcomputing 3333
+calc2 calc1
+calc3 calc2
+diffeq calc3
+automata 3310 3333 3332
+3332 calc1
+calc1 kidmath
+kidmath
+1101 ged
+3310 1101
+softwareeng 3333 3310
+ged

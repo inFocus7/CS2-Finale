@@ -1,0 +1,20 @@
+﻿  MazeSolver.cpp
+c:\users\ramon's laptop\desktop\cs2hw\mazesolver\mazesolver\mazegraph.h(83): warning C4018: '<': signed/unsigned mismatch
+c:\users\ramon's laptop\desktop\cs2hw\mazesolver\mazesolver\mazesolver.cpp(26): warning C4018: '<': signed/unsigned mismatch
+c:\users\ramon's laptop\desktop\cs2hw\mazesolver\mazesolver\priorityqueue.h(86): warning C4018: '<': signed/unsigned mismatch
+  c:\users\ramon's laptop\desktop\cs2hw\mazesolver\mazesolver\priorityqueue.h(71): note: while compiling class template member function 'bool minHeap<T>::childProblem(int)'
+          with
+          [
+              T=mazeGraph::vertex *
+          ]
+  c:\users\ramon's laptop\desktop\cs2hw\mazesolver\mazesolver\priorityqueue.h(135): note: see reference to function template instantiation 'bool minHeap<T>::childProblem(int)' being compiled
+          with
+          [
+              T=mazeGraph::vertex *
+          ]
+  c:\users\ramon's laptop\desktop\cs2hw\mazesolver\mazesolver\mazegraph.h(73): note: see reference to class template instantiation 'minHeap<T>' being compiled
+          with
+          [
+              T=mazeGraph::vertex *
+          ]
+  MazeSolver.vcxproj -> C:\Users\Ramon's Laptop\Desktop\CS2HW\MazeSolver\Debug\MazeSolver.exe
