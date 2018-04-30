@@ -1,2 +1,18 @@
 ﻿  WordPuzzle.cpp
+c:\users\ramon's laptop\desktop\cs2hw\wordpuzzle\wordpuzzle\heap.h(86): warning C4018: '<': signed/unsigned mismatch
+  c:\users\ramon's laptop\desktop\cs2hw\wordpuzzle\wordpuzzle\heap.h(71): note: while compiling class template member function 'bool minHeap<T>::childProblem(int)'
+          with
+          [
+              T=dictionaryGraph::vertex *
+          ]
+  c:\users\ramon's laptop\desktop\cs2hw\wordpuzzle\wordpuzzle\heap.h(135): note: see reference to function template instantiation 'bool minHeap<T>::childProblem(int)' being compiled
+          with
+          [
+              T=dictionaryGraph::vertex *
+          ]
+  c:\users\ramon's laptop\desktop\cs2hw\wordpuzzle\wordpuzzle\dictionary.h(71): note: see reference to class template instantiation 'minHeap<T>' being compiled
+          with
+          [
+              T=dictionaryGraph::vertex *
+          ]
   WordPuzzle.vcxproj -> C:\Users\Ramon's Laptop\Desktop\CS2HW\WordPuzzle\Debug\WordPuzzle.exe

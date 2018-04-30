@@ -19,4 +19,15 @@
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\..\..\Ramon%27s Laptop\Desktop\CS2HW\WordPuzzle\WordPuzzle\bst.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\Ramon%27s Laptop\Desktop\CS2HW\WordPuzzle\WordPuzzle\dictionary.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\Ramon%27s Laptop\Desktop\CS2HW\WordPuzzle\WordPuzzle\heap.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
 </Project>
