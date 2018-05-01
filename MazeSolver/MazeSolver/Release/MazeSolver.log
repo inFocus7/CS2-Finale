@@ -1,0 +1,23 @@
+﻿  MazeSolver.cpp
+c:\users\ramon's laptop\desktop\cs2hw\mazesolver\mazesolver\mazegraph.h(80): warning C4018: '<': signed/unsigned mismatch
+c:\users\ramon's laptop\desktop\cs2hw\mazesolver\mazesolver\mazesolver.cpp(25): warning C4018: '<': signed/unsigned mismatch
+c:\users\ramon's laptop\desktop\cs2hw\mazesolver\mazesolver\priorityqueue.h(86): warning C4018: '<': signed/unsigned mismatch
+  c:\users\ramon's laptop\desktop\cs2hw\mazesolver\mazesolver\priorityqueue.h(71): note: while compiling class template member function 'bool minHeap<T>::childProblem(int)'
+          with
+          [
+              T=mazeGraph::vertex *
+          ]
+  c:\users\ramon's laptop\desktop\cs2hw\mazesolver\mazesolver\priorityqueue.h(135): note: see reference to function template instantiation 'bool minHeap<T>::childProblem(int)' being compiled
+          with
+          [
+              T=mazeGraph::vertex *
+          ]
+  c:\users\ramon's laptop\desktop\cs2hw\mazesolver\mazesolver\mazegraph.h(70): note: see reference to class template instantiation 'minHeap<T>' being compiled
+          with
+          [
+              T=mazeGraph::vertex *
+          ]
+  Generating code
+  All 231 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  Finished generating code
+  MazeSolver.vcxproj -> C:\Users\Ramon's Laptop\Desktop\CS2HW\MazeSolver\Release\MazeSolver.exe

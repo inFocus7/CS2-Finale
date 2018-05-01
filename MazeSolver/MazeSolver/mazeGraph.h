@@ -3,8 +3,7 @@
 #include <string>
 #include <vector>
 #include <queue>
-#include <fstream>
-#include <sstream>
+//#include <fstream>
 #include "binaryST.h"
 
 class mazeGraph
@@ -14,9 +13,8 @@ private:
 	{
 	public:
 		char data;
-		//std::string position; //position in graph used to connect.
 		int xPosition, yPosition;
-		std::vector<vertex *> neighbors; //Should I replace with up, down, left, right?
+		std::vector<vertex *> neighbors;
 		bool visited{ false };
 		vertex * prior;
 		unsigned int distance{ UINT_MAX };
@@ -59,7 +57,6 @@ public:
 		{
 			xVertex->neighbors.push_back(yVertex);
 			yVertex->neighbors.push_back(xVertex);
-			//std::cout << "\tEdge from " << xVertex->position << " to " << yVertex->position << '\n'; //See if edges added
 		}
 		else
 		{

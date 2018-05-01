@@ -153,6 +153,7 @@
     <ClInclude Include="..\..\..\..\..\Ramon%27s Laptop\Desktop\CS2HW\WordPuzzle\WordPuzzle\bst.h" />
     <ClInclude Include="..\..\..\..\..\Ramon%27s Laptop\Desktop\CS2HW\WordPuzzle\WordPuzzle\dictionary.h" />
     <ClInclude Include="..\..\..\..\..\Ramon%27s Laptop\Desktop\CS2HW\WordPuzzle\WordPuzzle\heap.h" />
+    <ClInclude Include="..\..\..\..\..\Ramon%27s Laptop\Desktop\CS2HW\WordPuzzle\WordPuzzle\stack.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -4,15 +4,7 @@
 #include <vector>
 #include <queue>
 #include <fstream>
-#include <sstream>
 #include "binaryST.h"
-
-/* NOTES
-vertex: course
-neighbors: what you can take after this vertex
-visited: taken
-prereqs: prerequisites for this vertex
-NOTES */
 
 class digraph
 {
@@ -32,11 +24,6 @@ private:
 		}
 
 	};
-
-	void bfs(vertex * p)
-	{
-
-	}
 
 	//std::vector<vertex*> vertexList; //switch to bst later...
 	binarySearchTree<vertex *> masterList;
@@ -90,9 +77,9 @@ public:
 
 			std::cout << x->data << ' ';
 
-			for (int i = 0; i < x->neighbors.size(); i++) //check all of p's neighbors
+			for (int i = 0; i < x->neighbors.size(); i++) // the neighbors are the computers connected through it.
 			{
-				if (x->neighbors[i]->visited == false) //push em in if all prereqs taken
+				if (x->neighbors[i]->visited == false) // if not visited, visit.
 				{
 					Q.push(x->neighbors[i]);
 					x->neighbors[i]->visited = true;

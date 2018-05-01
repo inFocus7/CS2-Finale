@@ -152,7 +152,6 @@
   <ItemGroup>
     <ClInclude Include="..\..\..\..\..\Ramon%27s Laptop\Desktop\CS2HW\CourseScheduler\CourseScheduler\binaryST.h" />
     <ClInclude Include="..\..\..\..\..\Ramon%27s Laptop\Desktop\CS2HW\CourseScheduler\CourseScheduler\graph.h" />
-    <ClInclude Include="..\..\..\..\..\Ramon%27s Laptop\Desktop\CS2HW\CourseScheduler\CourseScheduler\test.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

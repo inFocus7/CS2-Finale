@@ -1,4 +1,5 @@
 #pragma once
+#include <iostream>
 #include <algorithm>
 #include "dictionary.h"
 
@@ -167,7 +168,7 @@ public:
 		std::cout << '\n';
 	}
 
-	void relax(T &V, unsigned int updatedMin)
+	void relax(T &V, unsigned int updatedMin) //relaxor function
 	{
 		//update
 		V->distance = updatedMin; //Does it update it overall??
@@ -176,7 +177,7 @@ public:
 
 		int index = findIndex(V);
 
-		while (updateNeeded(index, V))
+		while (updateNeeded(index, V)) //Update minHeap based on change
 		{
 			if (items[parent(index)]->distance > V->distance)
 			{

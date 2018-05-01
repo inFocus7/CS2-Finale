@@ -23,7 +23,7 @@
     <ClInclude Include="..\..\..\..\..\Ramon%27s Laptop\Desktop\CS2HW\CourseScheduler\CourseScheduler\graph.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\..\..\Ramon%27s Laptop\Desktop\CS2HW\CourseScheduler\CourseScheduler\test.h">
+    <ClInclude Include="..\..\..\..\..\Ramon%27s Laptop\Desktop\CS2HW\CourseScheduler\CourseScheduler\binaryST.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

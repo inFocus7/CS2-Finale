@@ -1,7 +1,6 @@
 #pragma once
 #include <iostream>
 #include "priorityQueue.h"
-#include <sstream>
 
 template <typename T>
 class binarySearchTree
@@ -26,7 +25,6 @@ private:
 	//attributes?
 	node * root;
 
-	//Find better replacement for stringstream. Noticably slowing down.
 	bool str_small(int x1, int x2, int y1, int y2) //compares to insert position coordinates correctly (not by ascii comparison)
 	{
 
