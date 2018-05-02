@@ -61,6 +61,35 @@ public:
 		return output;
 	}
 
+	TYPE pop_front()
+	{
+		TYPE output = head->data;
+		Node * doomed = head;
+		
+		if (head == tail)
+		{
+			tail = nullptr;
+			head = nullptr;
+		}
+		else
+		{
+			head = head->next;
+			head->prev = nullptr;
+		}
+		delete doomed;
+		numItems--;
+		return output;
+	}
+
+	TYPE the_front() // outputs front
+	{
+		return head->data;
+	}
+
+	TYPE the_back() // outputs back
+	{
+		return tail->data;
+	}
 	bool empty()
 	{
 		if (numItems == 0)
@@ -68,5 +97,14 @@ public:
 			return true;
 		}
 		return false;
+	}
+
+	//check if deconstructor works
+	~linkedStack()
+	{
+		while (!empty())
+		{
+			pop();
+		}
 	}
 };

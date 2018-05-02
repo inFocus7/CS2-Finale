@@ -2,6 +2,7 @@
 #include <iostream>
 #include <algorithm>
 #include "dictionary.h"
+#include "stack.h"
 
 template <typename T>
 class minHeap
@@ -99,7 +100,6 @@ public:
 		}
 		return false;
 	}
-
 	//add x to the min heap
 	//O(log n) worst case run time
 	void insert(T x)
@@ -205,5 +205,12 @@ public:
 			}
 		}
 
+	}
+	~minHeap()
+	{
+		while (!empty())
+		{
+			extractMin();
+		}
 	}
 };

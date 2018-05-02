@@ -49,21 +49,14 @@ private:
 
 	node * root;
 
-	std::vector<node *> letterIndex;
 	// RECURSION CAUSES STACK OVERFLOW (I THINK THIS WORKS) WAIT I COULD DO BFS SINCE NO STACK NEEDED
-	char currentCh{ '0' }, previousCh{ '0' }; //random initializer to start
 	void recInsert(node * p, T x)
 	{
-		currentCh = x->word[0];
 		while (p != nullptr) {
 			if (x->word < p->data->word) // if insertion is smaller 
 			{
 				if (p->left == nullptr)
 				{
-					if (currentCh != previousCh)
-					{
-						letterIndex.push_back(p->left);
-					}
 					p->left = new node(x);
 					break;
 				}
@@ -73,10 +66,6 @@ private:
 			{
 				if (p->right == nullptr)
 				{
-					if (currentCh != previousCh)
-					{
-						letterIndex.push_back(p->right);
-					}
 					p->right = new node(x);
 					break;
 				}
@@ -85,12 +74,9 @@ private:
 		}
 		if (p == nullptr) // will only happen if it starts at nullptr due to break statement.
 		{
-			letterIndex.push_back(p); //0 (letterindex[0])
 			root = new node(x);
 		}
 
-		previousCh = currentCh; 
-		//SWITCH TO BFS IF NEEDED, SINCE NO STACK OVERFLOW WOULD HAPPEN
 	}
 
 	void recMakeMax(node * p) // initialize all to max.
@@ -118,7 +104,6 @@ private:
 		}
 	}
 	
-	// FIND FASTER SOLUTION...
 	void recConnector(node * x, T y) // x goes through, y is inputted to get connected.
 	{
 		//MANUAL STACK EQUIVALENCE
@@ -191,6 +176,31 @@ public:
 	{
 		count++;
 		recInsert(root, x);
+	}
+
+	bool inDictionary(std::string x)
+	{
+		node * p = root;
+		//search tree. if found return true, else return false
+		while (p != nullptr)
+		{
+			if (p->data->word == x)
+			{
+				return true;
+			}
+			else
+			{
+				if (x < p->data->word)
+				{
+					p = p->left;
+				}
+				else
+				{
+					p = p->right;
+				}
+			}
+		}
+		return false;
 	}
 
 	node * recfindNode(node * p, std::string x) // stack overflow if recursive

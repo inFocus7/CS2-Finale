@@ -1,0 +1,25 @@
+﻿  WordPuzzle.cpp
+c:\users\ramon's laptop\desktop\cs2hw\wordpuzzle\wordpuzzle\heap.h(88): warning C4018: '<': signed/unsigned mismatch
+  c:\users\ramon's laptop\desktop\cs2hw\wordpuzzle\wordpuzzle\heap.h(73): note: while compiling class template member function 'bool minHeap<T>::childProblem(int)'
+          with
+          [
+              T=dictionaryGraph::vertex *
+          ]
+  c:\users\ramon's laptop\desktop\cs2hw\wordpuzzle\wordpuzzle\heap.h(136): note: see reference to function template instantiation 'bool minHeap<T>::childProblem(int)' being compiled
+          with
+          [
+              T=dictionaryGraph::vertex *
+          ]
+  c:\users\ramon's laptop\desktop\cs2hw\wordpuzzle\wordpuzzle\dictionary.h(152): note: see reference to class template instantiation 'minHeap<T>' being compiled
+          with
+          [
+              T=dictionaryGraph::vertex *
+          ]
+  Generating code
+c:\users\ramon's laptop\desktop\cs2hw\wordpuzzle\wordpuzzle\dictionary.h(60): warning C4715: 'dictionaryGraph::findVertex': not all control paths return a value
+c:\users\ramon's laptop\desktop\cs2hw\wordpuzzle\wordpuzzle\dictionary.h(125): warning C4715: 'dictionaryGraph::inDictionary': not all control paths return a value
+  26 of 380 functions ( 6.8%) were compiled, the rest were copied from previous compilation.
+    14 functions were new in current compilation
+    45 functions had inline decision re-evaluated but remain unchanged
+  Finished generating code
+  WordPuzzle.vcxproj -> C:\Users\Ramon's Laptop\Desktop\CS2HW\WordPuzzle\Release\WordPuzzle.exe

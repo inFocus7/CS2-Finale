@@ -20,10 +20,10 @@ private:
 		vertex * prior;
 		unsigned int distance{ UINT_MAX };
 
-		vertex(std::string x, int y)
+		vertex(std::string x)
 		{
 			word = x;
-			wordLength = y;
+			wordLength = x.length();
 		}
 	};
 
@@ -59,24 +59,24 @@ public:
 		}
 	}
 
-	void addVertex(std::string x, int y) // Adding makes connections. really really slow because connections...
+	void addVertex(std::string x) // Adding makes connections. really really slow because connections... 
 	{
-		switch (y)
+		switch (x.length())
 		{
 		case 1:
-			WL1Master.insert(new vertex(x, y));
+			WL1Master.insert(new vertex(x)); // n
 			WL1Master.connector(x); //*** Should work from the beginning since going through list every time a new vertice is added... I think.
 			break;
 		case 2:
-			WL2Master.insert(new vertex(x, y));
+			WL2Master.insert(new vertex(x));
 			WL2Master.connector(x);
 			break;
 		case 3:
-			WL3Master.insert(new vertex(x, y));
+			WL3Master.insert(new vertex(x));
 			WL3Master.connector(x);
 			break;
 		case 4:
-			WL4Master.insert(new vertex(x, y));
+			WL4Master.insert(new vertex(x));
 			WL4Master.connector(x);
 			break;
 		default:
@@ -100,6 +100,27 @@ public:
 		else
 		{
 			std::cout << "You misspelled something.\n";
+		}
+	}
+
+	bool inDictionary(std::string x, std::string y)
+	{
+		switch (x.length())
+		{
+		case 1:
+			return (WL1Master.inDictionary(x) && WL1Master.inDictionary(y));
+			break;
+		case 2:
+			return (WL2Master.inDictionary(x) && WL2Master.inDictionary(y));
+			break;
+		case 3:
+			return (WL3Master.inDictionary(x) && WL3Master.inDictionary(y));
+			break;
+		case 4:
+			return (WL4Master.inDictionary(x) && WL4Master.inDictionary(y));
+			break;
+		default:
+			break;
 		}
 	}
 
@@ -152,14 +173,12 @@ public:
 		{
 			// 1) Get min
 			vertex * min = Q.extractMin();
-			//std::cout << "min is " << min->word << '\n';
 			min->visited = true;
 			// 2) Update its neighbors if needed
 			for (unsigned int i{ 0 }; i < min->neighbors.size(); i++)
 			{
 				if (min->neighbors[i]->visited == false && (min->distance + 1) < min->neighbors[i]->distance)
 				{
-					//std::cout << "relaxed from " << min->word << " to " << min->neighbors[i]->word << '\n';
 					Q.relax(min->neighbors[i], (min->distance + 1));
 					min->neighbors[i]->prior = min;
 				}
@@ -167,11 +186,9 @@ public:
 		}
 
 		linkedStack<vertex *> path;
-		// 3) Make shortest path
 		for (vertex * curr = findVertex(y, y.length()); curr != findVertex(x, x.length()); curr = curr->prior)
 		{
 			path.push(curr);
-			//std::cout << curr->word << '\n';
 		}
 		// 4) Show solved ladder
 			//start (since not stored from the previous for loop)
